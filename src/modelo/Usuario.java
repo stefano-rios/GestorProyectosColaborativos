@@ -1,12 +1,16 @@
 package modelo;
 
-    public class Usuario {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Usuario {
     private int id;
     private String nombre;
     private String email;
     private String contraseña;
     private String carrera;
     private String rol;
+    private List<Solicitud> solicitudes = new ArrayList<>();
 
     public Usuario() {}
 
@@ -37,6 +41,14 @@ package modelo;
 
     public String getRol() { return rol; }
     public void setRol(String rol) { this.rol = rol; }
+
+    public List<Solicitud> getSolicitudes() {
+        return solicitudes;
+    }
+
+    public void setSolicitudes(List<Solicitud> solicitudes) {
+        this.solicitudes = solicitudes;
+    }
 
     @Override
     public String toString() {
