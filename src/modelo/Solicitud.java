@@ -10,6 +10,7 @@ public class Solicitud {
     private Date fecha = new Date();
     private String estado;
     private Usuario usuario;
+    private Proyecto proyecto;
 
 
     public Solicitud(){}
@@ -59,6 +60,14 @@ public class Solicitud {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public Proyecto getProyecto() {
+        return proyecto;
+    }
+
+    public void setProyecto(Proyecto proyecto) {
+        this.proyecto = proyecto;
     }
 
     @Override

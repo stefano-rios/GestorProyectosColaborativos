@@ -9,8 +9,9 @@ public class Usuario {
     private String email;
     private String contraseña;
     private String carrera;
-    private String rol;
+    private String rol; //Creador/Solicitante
     private List<Solicitud> solicitudes = new ArrayList<>();
+    private List<Proyecto> proyectos = new ArrayList<>();
 
     public Usuario() {}
 
@@ -50,6 +51,16 @@ public class Usuario {
         this.solicitudes = solicitudes;
     }
 
+    public List<Proyecto> getProyectos() {
+        return proyectos;
+    }
+
+    public void setProyectos(List<Proyecto> proyectos) {
+        this.proyectos = proyectos;
+    }
+
+
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -60,4 +71,6 @@ public class Usuario {
                 ", rol='" + rol + '\'' +
                 '}';
     }
+
+
 }
